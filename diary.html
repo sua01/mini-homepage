@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>2021 MINI HOMEPAGE</title>
+    <link rel="stylesheet" href="./static/font.css" />
+    <link rel="stylesheet" href="./static/diary.css" />
+    <link rel="stylesheet" href="./static/layout.css" />
+    <link rel="stylesheet" href="./static/home.css" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gaegu&family=Sunflower:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/3b423bfe4d.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="bookcover">
+      <div class="bookdot">
+        <div class="page">
+           <div id="column1">
+             <div id="today">TODAY <span style="color: red;">28</span> | TOTAL 234918</div>
+             <div id="profile">
+               <div id="photo"><img src="./static/images/chac.jpg"></div>
+               <div class="profile_text">안녕하세요. 모각코 플러스 HTML+CSS를 공부하고 있습니다! 즐거운 연말 보내세요^^</div>
+               <div class="profile_text2">솨</div>
+               <div class="profile-dropdown">
+                 <div class="dropdown-btn">
+                   <div class="dropdown-title">파도타기</div>
+                   <div class="triangle-down"></div>
+                 </div>
+                 <div class="dropdown-content">
+                   <a href="https://cafe.naver.com/codeuniv" target="_blank">코뮤니티로 가기</a>
+                   <a href="https://www.instagram.com/coding_comu/" target="_blank">인스타그램으로 가기</a>
+                 </div>
+               </div>
+             </div>
+          </div>
+          <div id="column2">
+             <div id="intro">
+               <div id="title">솨님의 추억 상ㅈΓ ♥⁼³₌₃</div>
+               <div id="url">https://url주소/나중에입력</div>
+             </div>
+             <div id="contents">
+               <div id="calendar">
+                 <div id="clock"><div>01.03</div><div>MON</div></div>
+                 <div id="date"><span class="blue">1</span> <span class="red">2</span> <span>3</span> <span>4</span> <span>5</span> <span>6</span>
+                  <span>7</span> <span class="blue">8</span> <span class="red">9</span> <span>10</span> <span>11</span> <span>12</span> <span>13</span> <span>14</span>
+                  <span class="blue">15</span> <span class="red">16</span> <span>17</span> <span>18</span> <span>19</span> <span>20</span> <span>21</span> <span>22</span> <span class="blue">22</span> <span class="red">23</span>
+                  <span>24</span> <span>25</span> <span>26</span> <span>27</span> <span>28</span> <span class="blue">29</span> <span class="red">30</span></div>
+               </div>
+               <div id="contents2">
+                 <div class="diary">
+                  <div class="diaryDate">2022.01.03 월 23:13</div>
+                  <div class="diaryMain">
+                    모각코 플러스의 끝이 보인다...☆<br>
+                    그래도 ㅇr직 부족한게 많ㄷr....<br><br>
+                    열심ㅎi 공부해야겠ㄷr...
+                  </div>
+                 </div>
+                 <div class="diary">
+                  <div class="diaryDate">2021.12.31 금 23:58</div>
+                  <div class="diaryMain">
+                    난... ㄱㅏ끔<br>
+                    눈물을 흘린ㄷ ㅏ...ㅜ<br>
+                    ㄱㅏ끔은 눈물을 참을 수 없는 ㄴㅐ가 별루ㄷㅏ...<br>
+                    맘이 ㅇㅏㅍㅏ서...<br>
+                    소ㄹㅣ치며... 울 수 있ㄷㅏ는건...<br>
+                    좋은ㄱㅓㅇㅑ...<br>
+                  </div>
+                 </div>
+                 <div class="diary">
+                  <div class="diaryDate">2021.12.30 목 16:06</div>
+                  <div class="diaryMain">
+                    오늘은 ヱ등학교 친구오ŀ 성수동øłl 놀러갔ㄷr....<br>
+                    예쁜 ㅋΓ페...<br>
+                    예쁜 맛집...<br>
+                    즐つㅓ웠ㄷr...<br>
+                  </div>
+              </div>
+              <div class="diary" id="secretDiary">
+                <div class="diaryDate">솨님의 비밀 일기</div>
+                <div class="diaryMain" id="secretDiaryMain"></div>
+             </div>
+                 <div id="secret">
+                   <button id="button" onclick="getTextFile()"><i class="fas fa-lock"></i> 솨님의 비밀일기 보기</button>
+                 </div> 
+               </div>
+             </div> 
+          </div>
+          <div id="menu">
+            <a href="./home.html"><button>홈</button></a>
+            <a href="./diary.html"><button>다이어리</button></a>
+            <a href="./photo.html"><button>사진첩</button></a>
+            <a href="./visit.html"><button>방명록</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function getTextFile(){
+        var input = document.createElement("input");
+        input.type="file";
+        input.accept = "text/plain";
+        input.onchange = function(event){
+          processFile(event.target.files[0]);
+        };
+        input.click();
+      }
+
+      function processFile(file){
+        var reader = new FileReader();
+        reader.readAsText(file, "utf-8");
+
+        reader.onload = function(){
+          document.getElementById("secretDiaryMain").innerText = reader.result;
+          document.getElementById("secretDiary").style.display = "block";
+        };
+      }
+    </script>
+
+  </body>
+</html>

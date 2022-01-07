@@ -1,0 +1,59 @@
+.blue{
+    color: blue;
+}
+
+#visit{
+    width: 525px;
+    height: 500px;
+    overflow: auto;
+}
+
+.guestbook-title {
+    height: 2rem;
+    background-color: #e7e7e7;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    font-size: 0.8rem;
+  }
+  
+  .guestbook-title > span {
+    margin-right: 0.5rem;
+  }
+  
+  .guestbook-box {
+    margin-bottom: 2rem;
+  }
+  
+  .guestbook-contents {
+    display: flex;
+    padding: 1.5rem 0;
+  }
+  
+  .guestbook-image {
+    flex: 0 0 8rem;
+    height: 8rem;
+    background-size: cover;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .background {
+    background-image: url("./images/bg.jpg");
+  }
+
+  .guestbook-image > img {
+    width: 80%;
+    height: 80%;
+  }
+  
+  .guestbook-memo {
+    flex: 1;
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    line-height: 1.5;
+  }

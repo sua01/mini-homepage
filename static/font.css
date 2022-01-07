@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'KyoboHand';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/KyoboHand.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+body{
+    font-family: 'Gaegu', cursive;
+    font-family: 'Sunflower', sans-serif;
+}
+
+.profile_text{
+    font-family: 'KyoboHand';
+    margin: 0px 20px 20px 20px;
+}
+
+.profile_text2{
+    font-family: 'KyoboHand';
+    margin: 170px 20px 10px 20px;
+}

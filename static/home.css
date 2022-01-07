@@ -1,0 +1,143 @@
+#intro{
+    display: flex;
+    flex: 0.1;
+    margin: 15px 0px 0px 15px;
+    font-size: 13px;
+  }
+  
+  #title{
+    flex: 0.5;
+  }
+  #url{
+    flex: 0.5;
+  }
+  
+  #contents{
+    flex: 2;
+    margin: 0px 0px 15px 15px;
+    background-color: white;
+    border-radius: 9px;
+    border: 1px solid #cdd5d8;
+    padding: 3%;
+  }
+
+  .contents_title{
+    color: deeppink;
+    border-bottom: 1px solid dimgray;
+  }
+  
+  #updatedNews{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10%;
+  }
+  
+  #news1{
+    margin-right: 15%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .text{
+    flex: 1;
+    padding: 0.05em;
+  }
+  
+  .album{
+    background-color: rgb(255, 105, 113);
+    color: white;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    padding: 3px;
+  }
+  
+  .board{
+    background-color: rgb(99, 106, 197);
+    color: white;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    padding: 3px;
+  }
+  
+  .text2{
+    border-bottom: 1px dotted dimgray;
+    display: flex;
+  }
+  
+  .text2 div{
+    padding-right: 43px;
+  }
+  
+  .num{
+    color: rgb(52, 52, 214);
+  }
+
+  .profile-dropdown {
+    flex: 0;
+    border: 1px solid #c9d4da;
+    padding: 5px;
+    
+    font-size: 0.8rem;
+    position: relative;
+    margin: 0px 20px 20px 20px;
+  }
+  
+  .triangle-down {
+    width: 0;
+    height: 0;
+    border-left: 4.5px solid transparent;
+    border-right: 4.5px solid transparent;
+    border-top: 5px solid #838383;
+  }
+  
+  .dropdown-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  
+  .profile-dropdown:hover > .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown-content > a {
+    display: block;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    padding: 6px;
+    color: black;
+    text-decoration: none;
+  }
+  
+  .dropdown-content > a:hover {
+    background-color: #f1f1f1;
+  }
+
+  #menu button{
+    width: 80px;
+    text-align: left;
+    margin-bottom: 0.7rem;
+    font-size: 1rem;
+    font-family: "NeoDunggeunmo";
+    padding: 0.3rem;
+    background-color: #ab3b89;
+    color: white;
+    border-radius: 0 5px 5px 0;
+    border: 1px solid grey;
+    font-family: 'Gaegu', cursive;
+    font-family: 'Sunflower', sans-serif;
+  }
+
+  #menu button:hover{
+    background-color: #f8c5e8;
+    color: rgb(49, 6, 245);
+  }

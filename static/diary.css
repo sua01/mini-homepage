@@ -1,0 +1,80 @@
+#contents{
+    font-family: 'KyoboHand';
+}
+
+#calendar{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #cdd5d8;
+}
+
+#clock{
+    flex: 0.1;
+    color: rgb(0, 89, 190);
+    text-align: center;
+    padding: 10px;
+}
+
+#date{
+    flex: 0.8;
+    text-align: center;
+    padding-left: 15px;
+}
+
+.blue{
+    color: blue;
+}
+
+.red{
+    color: red;
+}
+
+#date span{
+    padding-left: 5px;
+}
+
+#contents2{
+    overflow: auto;
+    width: 525px;
+    height: 440px;
+    margin-top: 15px;
+}
+
+.diary{
+    border: 1px solid #cdd5d8;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+.diaryDate{
+    font-family: 'Gaegu', cursive;
+    font-family: 'Sunflower', sans-serif;
+    color: rgb(0, 89, 190);
+    font-size: small;
+    margin-bottom: 10px;
+}
+
+.diaryMain{
+    font-family: 'KyoboHand';
+    text-align: center;
+}
+
+#secret button{
+    font-family: 'KyoboHand';
+    text-align: center;
+    display: inline-block;
+    padding: 10px;
+    color: white;
+    margin-left: 180px;
+    transition: 800ms ease all;
+    border: none;
+    background-color: white;
+}
+
+#secret button:hover{
+    background-color: salmon;
+}
+
+#secretDiary{
+    display: none;
+}
